@@ -1,0 +1,45 @@
+.catItem{
+	width: 256px;
+	height: 256px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: box-shadow 0.3s ease;
+	cursor: pointer;
+	position: relative;
+	&:hover{
+		box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
+		.like{
+			display: block;
+		}
+	}
+	&__img{
+		width: 225px;
+		height: 225px;
+	}
+}
+
+.likes{
+	position: absolute;
+	right: 28px;
+	bottom: 28.3px;
+}
+.like,.hovLike,.fullLike{
+	display: none;
+}
+
+.likes:hover{
+	.like{
+		display: none;
+	}
+	.hovLike{
+		display: block;
+	}
+}
+
+.like__on{
+	display: block;
+}
+.like__of{
+	display: none;
+}
